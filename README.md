@@ -1,3 +1,31 @@
+# Purchased Orders
+
+### About the project implemantation - structure
+
+The data are fetched into **App.js**. For better performance a fallback functionality is created. So in case something goes wrong with
+the API URL the *catch* will trigger the function to call the *local json* file that has the same data as the API. In any case the function will
+give us as response the data we need.
+
+If you want to see the fallback try to remove something from the URL and you will still be able to see
+the perspective data response on screen.
+
+Into components folder we have **layout** and **orders** folders.
+
+The Layout is the componenet that displays the final info of the project. Also while the project loads, a spinner shows up
+on the users screen informing them about the data loading.
+
+On the orders folders we have 4 components. Into OrdersList we pass as props the mapped data of the API. After that a list is created, that its size depends on
+the data loading (in our case the list has 3 items).
+
+As default for the project we create a table and set all its contents to false. So anytime a list item is selected only that item becomes 
+true. After the user clicks the list item and the button's value becomes true the modal displays on fullscreen on the same page. By clicking the
+**X** icon or by pressing escape the value returns to false and the modal closes.
+
+Into OrdersListItem we set the button selected as active for the modal with the perspective data to show up on the screen.
+
+Into OrderPreview Component we pass as props the info for the specific item with id to show up on the screen.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
