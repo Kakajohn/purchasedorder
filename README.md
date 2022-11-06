@@ -11,7 +11,7 @@ the perspective data response on screen.
 
 Into components folder we have **layout** and **orders** folders.
 
-The Layout is the componenet that displays the final info of the project. Also while the project loads, a spinner shows up
+The Layout is the component that displays the final info of the project. Also while the project loads, a spinner shows up
 on the users screen informing them about the data loading.
 
 On the orders folders we have 4 components. Into OrdersList we pass as props the mapped data of the API. After that a list is created, that its size depends on
